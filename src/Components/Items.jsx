@@ -15,7 +15,7 @@ const Items = (props) => {
             {props.items}
         </span>
     </div>
-    <div className='text-[#e74c3c]' onClick={()=>props.removeHandler(props.id)}>
+    <div className='text-[#e74c3c] cursor-pointer' onClick={()=>props.removeHandler(props.id)}>
     <BsTrash/>
     </div>
       

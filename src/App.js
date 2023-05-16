@@ -1,4 +1,4 @@
-import "./App.css";
+
 import Input from "./Components/Input";
 import TodoBox from "./Components/TodoBox";
 import { useState } from "react";
@@ -20,10 +20,13 @@ function App() {
     setTodos([...todos, { item, time: new Date().toLocaleTimeString() }]);
   };
 
+  
+
   return (
     <>
-      <div className="bg-black h-screen p-3">
-        <div className=" rounded mx-auto max-w-[750px] min-h-[750px] shadow-2xl bg-white">
+      <div className="bg-green-200 h-screen p-5">
+        <div className=" rounded-[2%] mx-auto max-w-[700px] min-h-[700px] shadow-xl bg-white p-2">
+          <span className="p-4 flex justify-center text-blue-800 text-bold text-2xl underline "> Todo List</span>
           <Input handler={addTodo} />
           <TodoBox data={todos} removeHandler={removeTodo} />
         </div>
@@ -31,5 +34,4 @@ function App() {
     </>
   );
 }
-
 export default App;
